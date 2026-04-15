@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPENSCSMAAPI", "OPENSCSMAAPI.csproj", "{4DE6A7B0-94E4-4B06-B7DF-2C5AA4667F47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPENSCSMModel", "..\OPENSCSMModel\OPENSCSMModel.csproj", "{BFDD8A4A-E894-478F-ACA3-E5D948C9DE7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPENSCSMAccessM", "..\OPENSCSMAccess\OPENSCSMAccessM.csproj", "{70A7D7E6-3C5E-4E0A-AFE8-E837DD511996}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DE6A7B0-94E4-4B06-B7DF-2C5AA4667F47}.Debug|x64.ActiveCfg = Debug|x64
+		{4DE6A7B0-94E4-4B06-B7DF-2C5AA4667F47}.Debug|x64.Build.0 = Debug|x64
+		{4DE6A7B0-94E4-4B06-B7DF-2C5AA4667F47}.Release|x64.ActiveCfg = Release|x64
+		{4DE6A7B0-94E4-4B06-B7DF-2C5AA4667F47}.Release|x64.Build.0 = Release|x64
+		{BFDD8A4A-E894-478F-ACA3-E5D948C9DE7B}.Debug|x64.ActiveCfg = Debug|x64
+		{BFDD8A4A-E894-478F-ACA3-E5D948C9DE7B}.Debug|x64.Build.0 = Debug|x64
+		{BFDD8A4A-E894-478F-ACA3-E5D948C9DE7B}.Release|x64.ActiveCfg = Release|x64
+		{BFDD8A4A-E894-478F-ACA3-E5D948C9DE7B}.Release|x64.Build.0 = Release|x64
+		{70A7D7E6-3C5E-4E0A-AFE8-E837DD511996}.Debug|x64.ActiveCfg = Debug|x64
+		{70A7D7E6-3C5E-4E0A-AFE8-E837DD511996}.Debug|x64.Build.0 = Debug|x64
+		{70A7D7E6-3C5E-4E0A-AFE8-E837DD511996}.Release|x64.ActiveCfg = Release|x64
+		{70A7D7E6-3C5E-4E0A-AFE8-E837DD511996}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1CE1917-35D4-4185-95F6-6EF18601B66E}
+	EndGlobalSection
+EndGlobal

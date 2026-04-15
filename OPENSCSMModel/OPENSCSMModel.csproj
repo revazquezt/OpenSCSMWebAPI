@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<Platforms>x64</Platforms>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Results\**" />
+	  <EmbeddedResource Remove="Results\**" />
+	  <None Remove="Results\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="ConsultaUsuarioEstatus.cs" />
+	</ItemGroup>
+
+</Project>

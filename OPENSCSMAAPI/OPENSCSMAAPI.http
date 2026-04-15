@@ -1,0 +1,6 @@
+@OPENSCSMAPI_HostAddress = http://localhost:5174
+
+GET {{OPENSCSMAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

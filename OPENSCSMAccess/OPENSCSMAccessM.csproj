@@ -1,0 +1,109 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net481</TargetFramework>
+	<LangVersion>10.0</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>x64</Platforms>
+	<OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<!-- Web API Framework -->
+		<PackageReference Include="Microsoft.AspNet.WebApi.SelfHost" Version="5.3.0" />
+		<!-- O esta alternativa más moderna -->
+		<PackageReference Include="Microsoft.Owin.SelfHost" Version="4.2.2" />
+		<PackageReference Include="Microsoft.AspNet.WebApi.Owin" Version="5.3.0" />
+	</ItemGroup>
+	
+    <ItemGroup>
+	    <Reference Include="System.Management.Automation">
+		    <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll</HintPath>
+		    <Private>False</Private>
+	    </Reference>
+    </ItemGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="PowerShell\*.ps1" />
+	  <EmbeddedResource Include="PowerShell\*.psm1" />
+	  <EmbeddedResource Include="PowerShell\ServiceRequest\*.ps1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="AppSettingsReader.cs" />
+    <Compile Remove="PowerShellExecutor.cs" />
+    <Compile Remove="SCSMOperations.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="PowerShell\RegServiceReq.ps1" />
+    <EmbeddedResource Remove="PowerShell\RegServiceRequest.ps1" />
+    <EmbeddedResource Remove="PowerShell\script1.ps1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="PowerShell\RegServiceReq.ps1" />
+    <None Remove="PowerShell\RegServiceRequest.ps1" />
+    <None Remove="PowerShell\script1.ps1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="PowerShell\AddAttachmentSCSM.ps1">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="PowerShell\ServiceRequest\CatalogsSRItems.ps1">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="PowerShell\UserVerification.ps1">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="PowerShell\CatalogsItems.ps1">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="PowerShell\IncidentsByAffectedUser.ps1">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="PowerShell\IncidentsByAssignedUser.ps1">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="PowerShell\IncidetById.ps1">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="PowerShell\RegAnalisysCommentIncident.ps1">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="PowerShell\RegIncidentV01.ps1">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="PowerShell\ResolveIncident.ps1">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="PowerShell\Utils.psm1">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="PowerShell\ServiceRequest\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OPENSCSMModel\OPENSCSMModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="PowerShell\AddAttachmentSCSM.ps1">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
