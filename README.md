@@ -11,8 +11,8 @@
 
 ## 📸 Preview
 
-![Swagger UI](docs/images/swagger-ui.png)
-![API Endpoint Example](docs/images/api-preview.png)
+> ![Swagger UI](docs/images/swagger-ui.png)
+> ![API Endpoint Example](docs/images/api-preview.png)
 
 
 ---
